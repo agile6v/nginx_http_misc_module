@@ -15,11 +15,6 @@
 
 typedef struct ngx_listening_s  ngx_listening_t;
 
-typedef struct {
-	unsigned            found:1;
-	ngx_str_t           var_value;
-} ngx_extend_misc_t;
-
 struct ngx_listening_s {
     ngx_socket_t        fd;
 
@@ -127,7 +122,7 @@ struct ngx_connection_s {
     ngx_recv_chain_pt   recv_chain;
     ngx_send_chain_pt   send_chain;
 
-	ngx_extend_misc_t   extendBackup;
+	ngx_array_t 		*misc_array;				//	array of ngx_misc_var_value
 
     ngx_listening_t    *listening;
 
