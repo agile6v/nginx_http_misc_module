@@ -122,7 +122,7 @@ struct ngx_connection_s {
     ngx_recv_chain_pt   recv_chain;
     ngx_send_chain_pt   send_chain;
 
-	ngx_array_t 		*misc_array;				//	array of ngx_misc_var_value
+	ngx_array_t 		*misc_array;				//	array of ngx_misc_header_value
 
     ngx_listening_t    *listening;
 
