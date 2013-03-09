@@ -8,6 +8,7 @@ nginx_http_misc_module
     器，这种方法的弊端就是浪费大量的资源和时间。在nginx端解决，由于nginx中变量的生存周期与请求生存周期相同，那么通过连接
     中第一个请求之后的请求将无法知道用户来源IP，所以通过提升nginx中变量的生存周期可以解决这个问题。
 
+###模块指令：
     directive:  get_req_header_value
     Syntax:     get_req_header_value req_number header $CUSTOM_VAR
     Default:    NONE
